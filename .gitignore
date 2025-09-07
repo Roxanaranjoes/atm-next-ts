@@ -1,0 +1,22 @@
+# Node
+node_modules/
+.env*
+
+# Next.js
+.next/
+.turbo/
+out/
+
+# Tests
+coverage/
+test-results/
+playwright-report/
+.playwright/
+
+# Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+

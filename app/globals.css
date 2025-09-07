@@ -1,0 +1,36 @@
+/**
+ * @file app/globals.css
+ * @description Estilos globales con Tailwind y ajustes visuales.
+ * @responsibilities Incluir directivas de Tailwind y reset base.
+ * @dependencies tailwindcss.
+ * @diagram [Tailwind Base] + [Components] + [Utilities]
+ */
+@tailwind base; /* base tailwind */
+@tailwind components; /* componentes */
+@tailwind utilities; /* utilidades */
+
+/* Base layer: resets y estilos globales */
+@layer base {
+  /* fuente y suavizado */
+  html,
+  body {
+    /* selector root */
+    @apply bg-background text-foreground; /* tema */
+  }
+
+  /* foco accesible (usa ring utilities para evitar theme() en CSS) */
+  :focus-visible {
+    /* foco keyboard */
+    @apply ring-2 ring-neon; /* anillo neón accesible */
+    outline: none; /* sin outline por defecto */
+  }
+}
+
+/* Utilities layer: helpers reusables */
+@layer utilities {
+  /* animación/sombra sutil global */
+  .soft-shadow {
+    /* util sombra */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* sombra */
+  }
+}

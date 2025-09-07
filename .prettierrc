@@ -1,0 +1,8 @@
+{
+  "singleQuote": true, // comillas simples
+  "semi": true, // punto y coma
+  "trailingComma": "all", // comas finales
+  "printWidth": 100, // ancho
+  "tabWidth": 2 // tabs
+}
+
