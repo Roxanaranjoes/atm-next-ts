@@ -14,12 +14,13 @@ jobs:
         uses: actions/checkout@v4
       - name: Setup PNPM
         uses: pnpm/action-setup@v4
-        # Sin "version": usa la definida en package.json (packageManager)
+        with:
+          run_install: false # instalaremos manualmente
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'pnpm'
+          # sin cache pnpm porque no tenemos pnpm-lock.yaml en el repo
       - name: Install
         run: pnpm install --frozen-lockfile=false
       - name: Lint
